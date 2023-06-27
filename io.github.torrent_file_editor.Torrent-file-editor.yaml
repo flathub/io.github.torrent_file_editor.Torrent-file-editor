@@ -1,6 +1,6 @@
 app-id: io.github.torrent_file_editor.Torrent-file-editor
 runtime: org.kde.Platform
-runtime-version: "5.15-22.08"
+runtime-version: 5.15-22.08
 sdk: org.kde.Sdk
 
 rename-desktop-file: torrent-file-editor.desktop
@@ -18,7 +18,7 @@ finish-args:
   - --device=dri
 modules:
   - name: torrent-file-editor
-    buildsystem: "cmake-ninja"
+    buildsystem: cmake-ninja
     config-opts:
       - -DLIB_INSTALL_DIR=/app/lib
       - -DQT5_BUILD=ON
@@ -26,14 +26,15 @@ modules:
       - -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
     sources:
       - type: archive
-        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v0.3.17/torrent-file-editor-0.3.17.tar.gz
-        sha256: e81a8701f04715dd9162a67cb1732f9d93209200a2aefcf9d2cc6acbb8d76443
+        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v0.3.18/torrent-file-editor-0.3.18.tar.gz
+        sha256: 29977de90102242eb3136031f167a8614efb852519bdc515393191b9088e171c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/torrent-file-editor/torrent-file-editor/releases/latest
-          version-query: '.tag_name | sub("^v"; "")'
+          version-query: .tag_name | sub("^v"; "")
           timestamp-query: .published_at
-          url-query: '.assets[] | select(.name=="torrent-file-editor-" + $version + ".tar.gz") | .browser_download_url'
+          url-query: .assets[] | select(.name=="torrent-file-editor-" + $version +
+            ".tar.gz") | .browser_download_url
 
       - type: patch
         path: patches/appfile-fix.patch
