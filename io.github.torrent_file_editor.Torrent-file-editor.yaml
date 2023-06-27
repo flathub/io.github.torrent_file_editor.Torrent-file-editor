@@ -1,6 +1,6 @@
 app-id: io.github.torrent_file_editor.Torrent-file-editor
 runtime: org.kde.Platform
-runtime-version: "5.15-22.08"
+runtime-version: "6.5"
 sdk: org.kde.Sdk
 
 rename-desktop-file: torrent-file-editor.desktop
@@ -21,13 +21,13 @@ modules:
     buildsystem: "cmake-ninja"
     config-opts:
       - -DLIB_INSTALL_DIR=/app/lib
-      - -DQT5_BUILD=ON
+      - -DQT6_BUILD=ON
       - -DENABLE_PCH=OFF
       - -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
     sources:
       - type: archive
-        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v0.3.17/torrent-file-editor-0.3.17.tar.gz
-        sha256: e81a8701f04715dd9162a67cb1732f9d93209200a2aefcf9d2cc6acbb8d76443
+        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v0.3.18/torrent-file-editor-0.3.18.tar.gz
+        sha256: 78b69e0151c5998b4df8b69225e7930c18b7d4419eeaabcad769df0f38a86292
         x-checker-data:
           type: json
           url: https://api.github.com/repos/torrent-file-editor/torrent-file-editor/releases/latest
