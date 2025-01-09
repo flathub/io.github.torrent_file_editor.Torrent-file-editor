@@ -44,6 +44,7 @@ index d24c3e6..9e789c9 100644
 -  <updatecontact>drizt72@zoho.eu</updatecontact>
 +  <update_contact>drizt72@zoho.eu</update_contact>
 +  <releases>
++    <release version="1.0.0" date="2024-10-08" />
 +    <release version="0.3.18" date="2020-06-28" />
 +  </releases>
    <kudos>
