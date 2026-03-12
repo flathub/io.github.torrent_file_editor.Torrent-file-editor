@@ -23,13 +23,14 @@ modules:
       - -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
     sources:
       - type: archive
-        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v1.0.0/torrent-file-editor-1.0.0.tar.gz
-        sha256: 47162b34fd9969aaf2afd43d1a5ee4a641f2e482dbfbbc8e8257a8c05d8fd42e
+        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v1.0.1/torrent-file-editor-1.0.1.tar.gz
+        sha256: 60633357d25c3a9bfd2a2db9c7fcffe7093082049383f013861fc8f4bdba4b33
         x-checker-data:
           type: json
           url: https://api.github.com/repos/torrent-file-editor/torrent-file-editor/releases/latest
           version-query: .tag_name | sub("^v"; "")
           timestamp-query: .published_at
-          url-query: .assets[] | select(.name=="torrent-file-editor-" + $version + ".tar.gz") | .browser_download_url
+          url-query: .assets[] | select(.name=="torrent-file-editor-" + $version +
+            ".tar.gz") | .browser_download_url
       - type: patch
         path: patches/appfile-fix.patch
