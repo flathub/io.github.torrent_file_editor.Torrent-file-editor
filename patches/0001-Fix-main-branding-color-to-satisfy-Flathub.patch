@@ -1,0 +1,25 @@
+From 1f6aaf39527f724663be274133095c0747243d29 Mon Sep 17 00:00:00 2001
+From: Ivan Romanov <drizt72@zoho.eu>
+Date: Thu, 2 Apr 2026 20:28:21 +0500
+Subject: [PATCH] Fix main branding color to satisfy Flathub
+
+---
+ io.github.torrent_file_editor.Torrent-file-editor.metainfo.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/io.github.torrent_file_editor.Torrent-file-editor.metainfo.xml b/io.github.torrent_file_editor.Torrent-file-editor.metainfo.xml
+index d323551..b295558 100644
+--- a/io.github.torrent_file_editor.Torrent-file-editor.metainfo.xml
++++ b/io.github.torrent_file_editor.Torrent-file-editor.metainfo.xml
+@@ -31,7 +31,7 @@
+   </description>
+ 
+   <branding>
+-    <color type="primary" scheme_preference="light">#43d760</color>
++    <color type="primary" scheme_preference="light">#72e885</color>
+     <color type="primary" scheme_preference="dark">#28873b</color>
+   </branding>
+ 
+-- 
+2.53.0
+

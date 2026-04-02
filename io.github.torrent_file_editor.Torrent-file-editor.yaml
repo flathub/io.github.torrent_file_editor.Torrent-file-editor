@@ -25,3 +25,5 @@ modules:
           version-query: .tag_name | sub("^v"; "")
           timestamp-query: .published_at
           url-query: .assets[] | select(.name=="torrent-file-editor-" + $version + ".tar.gz") | .browser_download_url
+      - type: patch
+        path: patches/0001-Fix-main-branding-color-to-satisfy-Flathub.patch
