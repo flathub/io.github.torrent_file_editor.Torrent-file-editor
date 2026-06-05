@@ -17,13 +17,11 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v1.0.2/torrent-file-editor-1.0.2.tar.gz
-        sha256: adbc8eda5105c8dd6a2b231165c5446fc062b566272b40493a4dcd0bfc511e5b
+        url: https://github.com/torrent-file-editor/torrent-file-editor/releases/download/v1.0.3/torrent-file-editor-1.0.3.tar.gz
+        sha256: 9a49c8ae27026d4bac5bcfeef33070425f6377e4e556e58205542a8b2b3216ca
         x-checker-data:
           type: json
           url: https://api.github.com/repos/torrent-file-editor/torrent-file-editor/releases/latest
           version-query: .tag_name | sub("^v"; "")
           timestamp-query: .published_at
           url-query: .assets[] | select(.name=="torrent-file-editor-" + $version + ".tar.gz") | .browser_download_url
-      - type: patch
-        path: patches/0001-Fix-main-branding-color-to-satisfy-Flathub.patch
